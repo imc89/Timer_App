@@ -4,7 +4,7 @@
 Iñigo Montánchez Crespo
 
 ## Repository
-
+(https://github.com/imc89/Timer_App)
 
 ## About
 Este proyecto es un contador por el cual el usuario al introducir los datos correctamente podrá ver un temporizador. Cuando el usuario
