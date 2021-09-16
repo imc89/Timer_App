@@ -1,5 +1,5 @@
 import { LitElement, html} from "lit-element";
-import { AppInputs } from "../components/app-inputs";
+import { AppInput } from "../components/app-input";
 import { AppButton } from "../components/app-button";
 import { Router } from '@vaadin/router';
 
@@ -59,8 +59,8 @@ class LoginPage extends LitElement {
 
     <div >
       <img src=${lock} />
-      <app-inputs id="email" types="email" placeholder="email"></app-inputs>
-      <app-inputs id="pass" types="password" placeholder="pass"></app-inputs>
+      <app-input id="email" types="email" placeholder="email"></app-input>
+      <app-input id="pass" types="password" placeholder="pass"></app-input>
       <app-button @click="${this.handleClick}" text="Log in"></app-button>
   </div>
       `;

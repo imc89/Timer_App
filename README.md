@@ -25,6 +25,7 @@ A su vez se han utilizado diferentes componentes:
 Servirá con clonar el repositorio de Github y desde la terminal lanzar los comandos:
 * npm i -> para instalar las dependencias.
 * npm run start -> para correr la aplicación.
+* npm run test -> correr los test.
 
 ## Notes
 Los datos se administrarán a través de los siguientes métodos:

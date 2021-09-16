@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit-element';
 
-export class AppInputs extends LitElement {
+export class AppInput extends LitElement {
 
   static get properties() {
     return {
@@ -37,4 +37,4 @@ export class AppInputs extends LitElement {
     `;
   }
 }
-customElements.define('app-inputs', AppInputs);
+customElements.define('app-input', AppInput);
