@@ -1,5 +1,5 @@
-import "./pages/login-page.js";
-import "./pages/timer-page.js";
+import './pages/login-page.js';
+import './pages/timer-page.js';
 import { Router } from '@vaadin/router';
 
 function initRouter() {
@@ -9,12 +9,12 @@ function initRouter() {
   router.setRoutes([
     {
       path: '/',
-      component: 'login-page'
+      component: 'login-page',
     },
     {
-      path: '/timer',
-      component: 'timer-page'
-    }
+      path: '/timer/:user',
+      component: 'timer-page',
+    },
   ]);
 }
 
