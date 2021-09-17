@@ -4,7 +4,10 @@ export class AppTimer extends LitElement {
 
   static get properties() {
     return {
-      stop : { type: Boolean }
+      stop : { type: Boolean },
+      seconds : { type: String },
+      minutes : { type: String },
+      hours : { type: String }
     };
   }
 
@@ -55,7 +58,6 @@ export class AppTimer extends LitElement {
         hours += 1;
         this.hours = this.pad(hours);
       }
-      this.requestUpdate();
     }, 1000);
   }
 
