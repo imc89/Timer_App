@@ -41,18 +41,18 @@ export class AppTimer extends LitElement {
     this.hours = '00';
 
     this.interval = setInterval(() => {
-      seconds++;
+      seconds += 1;
       this.seconds = this.pad(seconds);
       if(seconds === 60){
         seconds = 0;
         this.seconds = '00';
-        minutes++;
+        minutes += 1;
         this.minutes = this.pad(minutes);
       }
       if(minutes === 60){
         minutes = 0;
         this.minutes = '00'
-        hours++;
+        hours += 1;
         this.hours = this.pad(hours);
       }
       this.requestUpdate();
@@ -60,12 +60,11 @@ export class AppTimer extends LitElement {
   }
 
   pad(val) {
-    let valString = val + "";
+    const valString = `${val}` ;
     if (valString.length < 2) {
-      return "0" + valString;
-    } else {
-      return valString;
+      return `0${valString}`;
     }
+      return valString;
   }
 
   render() {

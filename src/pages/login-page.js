@@ -1,7 +1,7 @@
 import { LitElement, html} from "lit-element";
-import { AppInput } from "../components/app-input";
-import { AppButton } from "../components/app-button";
 import { Router } from '@vaadin/router';
+import  '../components/app-input.js';
+import '../components/app-button.js';
 
 const lock = new URL('../../assets/lock.png', import.meta.url).href;
 const mock = new URL('../mocks/user.json', import.meta.url).href;
@@ -58,7 +58,7 @@ class LoginPage extends LitElement {
     </style>
 
     <div >
-      <img src=${lock} />
+      <img src=${lock} alt=""/>
       <app-input id="email" types="email" placeholder="email"></app-input>
       <app-input id="pass" types="password" placeholder="pass"></app-input>
       <app-button @click="${this.handleClick}" text="Log in"></app-button>

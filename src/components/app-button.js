@@ -9,7 +9,7 @@ export class AppButton extends LitElement {
     }
 
     handleClick() {
-      let click = new Event('click');
+      const click = new Event('click');
       this.dispatchEvent(click);
     }
 

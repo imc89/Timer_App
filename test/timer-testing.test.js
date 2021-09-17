@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 
-import '../src/pages/timer-page';
+import '../src/pages/timer-page.js';
 
 describe('MyApp', () => {
   let element;

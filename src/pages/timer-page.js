@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit-element";
-import { AppTimer } from '../components/app-timer';
-import { AppButton } from "../components/app-button";
+import  '../components/app-timer.js';
+import  '../components/app-button.js';
 
 class TimerPage extends LitElement {
 
