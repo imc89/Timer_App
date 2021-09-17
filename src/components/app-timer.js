@@ -31,10 +31,6 @@ export class AppTimer extends LitElement {
     localStorage.setItem('timer', time);
   }
 
-  createRenderRoot() {
-    return this;
-  }
-
   setTimer() {
     let seconds = 0;
     let minutes = 0;

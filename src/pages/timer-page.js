@@ -10,11 +10,6 @@ class TimerPage extends LitElement {
     };
   }
 
-
-  createRenderRoot() {
-    return this;
-  }
-
   handleClick() {
     this._stop = true;
   }

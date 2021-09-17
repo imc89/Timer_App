@@ -9,13 +9,9 @@ const mock = new URL('../mocks/user.json', import.meta.url).href;
 
 class LoginPage extends LitElement {
 
-  createRenderRoot() {
-    return this;
-  }
-
   firstUpdated() {
-    this.email = this.querySelector("#email");
-    this.pass = this.querySelector("#pass");
+    this.email = this.shadowRoot.querySelector("#email");
+    this.pass = this.shadowRoot.querySelector("#pass");
   }
 
   async validateUser() {
