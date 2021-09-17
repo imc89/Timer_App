@@ -8,11 +8,6 @@ export class AppButton extends LitElement {
       };
     }
 
-    handleClick() {
-      const click = new Event('click');
-      this.dispatchEvent(click);
-    }
-
     render() {
 
         return html`
@@ -31,7 +26,7 @@ export class AppButton extends LitElement {
         };
         </style>
 
-          <button  id="loginbutton" @click="${this.handleClick}">${this.text}</button>
+          <button  id="loginbutton">${this.text}</button>
         `;
     }
 }
