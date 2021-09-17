@@ -1,4 +1,4 @@
-import { LitElement, html} from "lit-element";
+import { html, css, LitElement } from 'lit';
 import { Router } from '@vaadin/router';
 import  '../components/app-input.js';
 import '../components/app-button.js';
@@ -8,6 +8,22 @@ const mock = new URL('../mocks/user.json', import.meta.url).href;
 
 
 class LoginPage extends LitElement {
+
+  static get styles() {
+    return css`
+     img {
+        padding-top: 50px;
+        width:100px ;
+        height:140px
+      }
+      div {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+      }
+    `;
+  }
 
   firstUpdated() {
     this.email = this.shadowRoot.querySelector("#email");
@@ -39,19 +55,6 @@ class LoginPage extends LitElement {
 
   render() {
     return html`
-    <style>
-      img {
-        padding-top: 50px;
-        width:100px ;
-        height:140px
-      }
-      div {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        min-height: 100vh;
-      }
-    </style>
 
     <div >
       <img src=${lock} alt=""/>

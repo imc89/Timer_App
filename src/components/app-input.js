@@ -1,6 +1,25 @@
-import { LitElement, html } from 'lit-element';
+import { html, css, LitElement } from 'lit';
 
 export class AppInput extends LitElement {
+
+  static get styles() {
+    return css`
+      input {
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 0px;
+        padding: 1rem 0.6rem;
+        color:  #333333;
+        border-bottom: 1px solid  #333333;
+        background: transparent;
+        cursor: text;
+        margin-left: auto;
+        width: 95%;
+        margin-right: auto;
+      }
+    `;
+  }
 
   static get properties() {
     return {
@@ -16,22 +35,6 @@ export class AppInput extends LitElement {
 
   render() {
     return html`
-    <style>
-      input {
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        border-radius: 0px;
-        padding: 1rem 0.6rem;
-        color:  #333333;
-        border-bottom: 1px solid  #333333;
-        background: transparent;
-        cursor: text;
-        margin-left: auto;
-        width: 95%;
-        margin-right: auto;
-      }
-    </style>
 
     <input .type="${this.types}" .placeholder="${this.placeholder}"/>
     `;

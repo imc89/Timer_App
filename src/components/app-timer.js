@@ -1,6 +1,18 @@
-import { LitElement, html} from 'lit-element';
+import { html, css, LitElement } from 'lit';
 
 export class AppTimer extends LitElement {
+
+  static get styles() {
+    return css`
+       #time {
+      font-family: monospace;
+      color:lightgray;
+      font-size: 5em;
+      padding-top: 1em;
+      text-align: center;
+      }
+    `;
+  }
 
   static get properties() {
     return {
@@ -67,15 +79,6 @@ export class AppTimer extends LitElement {
 
   render() {
     return html`
-    <style>
-     #time {
-      font-family: monospace;
-      color:lightgray;
-      font-size: 5em;
-      padding-top: 1em;
-      text-align: center;
-      }
-    </style>
 
     <span id="time">${this.hours}:</span><span id="time">${this.minutes}:</span><span id="time">${this.seconds}</span>
     <br>

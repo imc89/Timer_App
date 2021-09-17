@@ -1,18 +1,10 @@
-import { LitElement, html } from 'lit-element';
+import { html, css, LitElement } from 'lit';
 
 export class AppButton extends LitElement {
 
-    static get properties() {
-      return {
-        text : { type: String }
-      };
-    }
-
-    render() {
-
-        return html`
-        <style>
-           button {
+  static get styles() {
+    return css`
+      button {
           margin-top: 15px;
           background-color: rgb(37, 99, 235);
           font-weight: bold;
@@ -23,8 +15,19 @@ export class AppButton extends LitElement {
           border: none;
           cursor: pointer;
           outline:0;
-        };
-        </style>
+      }
+    `;
+  }
+
+    static get properties() {
+      return {
+        text : { type: String }
+      };
+    }
+
+    render() {
+
+        return html`
 
           <button  id="loginbutton">${this.text}</button>
         `;
