@@ -26,7 +26,7 @@ class LoginPage extends LitElement {
     if(user.email === email && user.pass === pass){
       return true;
     }
-
+    return false;
   }
 
 

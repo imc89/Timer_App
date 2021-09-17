@@ -57,7 +57,7 @@ export class AppTimer extends LitElement {
     }, 1000);
   }
 
-  pad(val) {
+  pad (val) {
     const valString = `${val}` ;
     if (valString.length < 2) {
       return `0${valString}`;
